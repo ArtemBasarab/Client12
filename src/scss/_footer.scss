@@ -1,8 +1,230 @@
 /* === START footer styles === */
 
 .footer {
-    height: 10vh;
-    background: tomato;
+    background: $black;
+    padding: 60px 0;
+    &__container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: 
+            "logo nav"
+            "main main"
+            "address social";
+            
+    }
+
+    &__logo-block {
+        grid-area: logo;
+    }
+
+    &__logo {
+    }
+
+    &__nav-block {
+        grid-area: nav;
+        justify-self: end;
+        
+    }
+
+    &__nav-item {
+        color: #fff;
+        margin-left: 24px;
+    }
+
+    &__main-block {
+        grid-area: main;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 0 95px;
+        padding: 80px 64px;
+        
+        margin-top: 54px;
+        margin-bottom: 48px;
+        background: rgba($color: #6D6E76, $alpha: 0.2);
+    }
+
+    &__title {
+        font-weight: 500;
+        color: #fff;
+        align-self: center;
+    }
+
+    &__form-block {
+        align-self: center;
+        display: grid;
+        grid-template-columns: auto 180px;
+        gap: 0 24px;    
+        height: 56px;
+        
+    }
+
+    &__form {
+        height: inherit;
+    }
+
+    &__form-label {
+        display: block;
+        width: 100%;
+        height: inherit;
+    }
+
+    &__form-input {
+        width: 100%;
+        height: inherit;
+        background: transparent;
+        border: 1px solid $darkGrey;
+        outline: none;
+        color: $mediumGrey;
+        padding-left: 24px;
+        font-size: 1.125rem;
+        font-family: "Sen", serif;
+        
+    }
+
+    &__form-btn {
+        width: 180px;
+        
+            }
+
+    &__address-block {
+        grid-area: address;
+    }
+
+    &__address {
+        display: block;
+        
+        margin-bottom: 5px;
+        color: $mediumGrey;
+    }
+
+    &__email {
+        color: $mediumGrey;
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+    &__tel {
+        color: $mediumGrey;
+        margin-left: 8px;
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+    &__social-block {
+        grid-area: social;
+        align-items: center;
+        justify-self: end;
+    }
+
+    &__social-item {
+        margin-left: 26px;
+        color: $mediumGrey;
+    }
 }
 
+@media screen and (max-width: 1450px) {
+    .footer {
+        &__main-block {
+            grid-template-columns: 1fr;
+        }
+
+        &__title {
+            text-align: center;
+        }
+        &__form-block {
+            margin-top: 25px;
+            width: 70%;
+            justify-self: center;
+        }
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .footer {
+        &__container {
+            grid-template-columns: 1fr;
+            grid-template-areas: 
+                "logo"
+                "main"
+                "nav"
+                "social"
+                "address";
+        }
+        &__logo-block, &__nav-block, &__social-block, &__address-block {
+            justify-self: center;
+        }
+
+        &__main-block {
+            padding: 40px 30px;
+            margin-bottom: 25px;
+        }
+        
+        &__nav-item {
+            margin: 0 15px;
+        }
+
+        &__address-block {
+            margin-top: 40px;
+            text-align: center;
+        }
+
+        &__social-block {
+            margin-top: 20px;
+        }
+
+        &__social-item {
+            margin:  0 15px;
+        }
+    }
+}
+
+
+@media screen and (max-width: 1100px) {
+    .footer {
+       
+        &__form-block {
+            
+            width: 90%;
+            
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .footer {
+
+        &__main-block {
+            padding: 25px;
+            
+        }
+        &__form-block {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            height: auto;
+        }
+
+        &__form {
+            height: 56px;
+        }
+        &__form-btn {
+            margin-top: 20px;
+            width: 100%;
+        }
+    }
+}
+
+@media screen and (max-width: 635px) {
+    .footer {
+        &__nav-block {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        &__nav-item {
+            padding-top: 10px;
+        }
+    }
+}
 /* === END footer styles === */

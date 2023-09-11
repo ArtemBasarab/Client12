@@ -13,14 +13,266 @@
   <body>
     <div class="wrapper">
       <header class="header">
-        <div class="container">@@include('partials/navbar.html')</div>
+        @@include('partials/navbar.html')
+        <img class="header__bg" src="img/home-header-img.jpg" alt="img" />
+        <div class="header__container container">
+          <div class="header__content">
+            <span class="header__subtitle"> POSTED ON <i>STARTUP</i> </span>
+            <h1 class="header__title">
+              Step-by-step guide to choosing great font pairs
+            </h1>
+            <span class="header__info">
+              <span class="header__author">
+                By
+                <a class="header__author-link" href="#">James West</a>
+              </span>
+              <span class="header__date">May 23, 2022</span>
+            </span>
+            <p class="header__text">
+              Duis aute irure dolor in reprehenderit in voluptate velit esse
+              cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+              cupidatat non proident.
+            </p>
+            <a class="header__btn yellow-btn" href="#">Read More ></a>
+          </div>
+        </div>
       </header>
       <main>
-        
+        <section class="posts">
+          <div class="posts__container container">
+            <div class="posts__content">
+              <div class="posts__main">
+                <h2 class="posts__main-heading">Featured Post</h2>
+                <div class="posts__main-content">
+                  <div class="posts__main-img-block">
+                    <img
+                      class="posts__main-img"
+                      src="img/posts-single.jpg"
+                      alt="img"
+                    />
+                  </div>
+                  <span class="posts__main-author">
+                    By
+                    <a class="posts__main-author-link" href="#">John Doe</a>
+                  </span>
+                  <span class="posts__main-date"> May 23, 2022 </span>
+                  <h3 class="posts__main-title">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                    do eiusmod tempor.
+                  </h3>
+                  <p class="posts__main-text">
+                    Duis aute irure dolor in reprehenderit in voluptate velit
+                    esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
+                    occaecat cupidatat non proident.
+                  </p>
+                  <a class="posts__main-btn yellow-btn" href="#">Read More ></a>
+                </div>
+              </div>
+              <div class="posts__list">
+                <h3 class="posts__list-heading">All posts</h3>
+                <a class="posts__list-link" href="#">View All</a>
+                <div class="posts__list-block">
+                  <div class="posts__list-item">
+                    <span class="posts__list-item-author">
+                      By
+                      <a class="posts__list-item-author-link" href="#">
+                        John Doe
+                      </a>
+                    </span>
+                    <span class="posts__list-item-date">May 23, 20222</span>
+                    <a class="posts__list-item-title-link" href="#">
+                      <h4 class="posts__list-item-title">
+                        8 Figma design systems that you can download for free
+                        today.
+                      </h4>
+                    </a>
+                  </div>
+                  <div class="posts__list-item">
+                    <span class="posts__list-item-author">
+                      By
+                      <a class="posts__list-item-author-link" href="#">
+                        John Doe
+                      </a>
+                    </span>
+                    <span class="posts__list-item-date">May 23, 20222</span>
+                    <a class="posts__list-item-title-link" href="#">
+                      <h4 class="posts__list-item-title">
+                        8 Figma design systems that you can download for free
+                        today.
+                      </h4>
+                    </a>
+                  </div>
+                  <div class="posts__list-item">
+                    <span class="posts__list-item-author">
+                      By
+                      <a class="posts__list-item-author-link" href="#">
+                        John Doe
+                      </a>
+                    </span>
+                    <span class="posts__list-item-date">May 23, 20222</span>
+                    <a class="posts__list-item-title-link" href="#">
+                      <h4 class="posts__list-item-title">
+                        8 Figma design systems that you can download for free
+                        today.
+                      </h4>
+                    </a>
+                  </div>
+                  <div class="posts__list-item">
+                    <span class="posts__list-item-author">
+                      By
+                      <a class="posts__list-item-author-link" href="#">
+                        John Doe
+                      </a>
+                    </span>
+                    <span class="posts__list-item-date">May 23, 20222</span>
+                    <a class="posts__list-item-title-link" href="#">
+                      <h4 class="posts__list-item-title">
+                        8 Figma design systems that you can download for free
+                        today.
+                      </h4>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="about">
+          <div class="about__container container">
+            <div class="about__content">
+              <div class="about__first-block">
+                <span class="about__subtitle"> ABOUT US </span>
+                <h2 class="about__title">
+                  We are a community of content writers who share their
+                  learnings
+                </h2>
+                <p class="about__text">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                </p>
+                <a class="about__btn" href="#">Read More ></a>
+              </div>
+              <div class="about__second-block">
+                <span class="about__subtitle"> OUR MISSION </span>
+                <h3 class="about__title">
+                  Creating valuable content for creatives all around the world
+                </h3>
+                <p class="about__text">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                  laboris nisi ut aliquip ex ea commodo consequat.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="category">
+          <div class="category__container container">
+            <h2 class="category__title">Choose A Category</h2>
+            @@include('partials/category.html')
+          </div>
+        </section>
+        <section class="post">
+          <div class="post__container container">
+            <div class="post__block">
+              <div class="post__bg-block">
+                <img class="post__bg-img" src="img/post-bg.png" alt="img" />
+              </div>
+              <div class="post__content">
+                <span class="post__subtitle"> WHY WE STARTED </span>
+                <h1 class="post__title">
+                  It started out as a simple idea and evolved into our passion
+                </h1>
+                <p class="post__text">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                  laboris nisi ut aliquip.
+                </p>
+                <a class="post__btn yellow-btn" href="#">
+                  Discover our story >
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="authors">@@include('partials/authors.html')</section>
+        <section class="partners">
+          <div class="partners__container container">
+            <div class="partners__content">
+              <h4 class="partners__title"><i>We are</i>Featured in</h4>
+              <div class="partners__logo-block swiper">
+                <div class="partners__logo-block-wrapper swiper-wrapper">
+                  <div class="partners__logo-item swiper-slide">
+                    <img class="partners__logo-item-img" src="img/Logo 1.png" alt="img">
+                  </div>
+                  <div class="partners__logo-item swiper-slide">
+                    <img class="partners__logo-item-img" src="img/Logo 1.png" alt="img">
+                  </div>
+                  <div class="partners__logo-item swiper-slide">
+                    <img class="partners__logo-item-img" src="img/Logo 1.png" alt="img">
+                  </div>
+                  <div class="partners__logo-item swiper-slide">
+                    <img class="partners__logo-item-img" src="img/Logo 1.png" alt="img">
+                  </div>
+                  <div class="partners__logo-item swiper-slide">
+                    <img class="partners__logo-item-img" src="img/Logo 1.png" alt="img">
+                  </div>
+                  <div class="partners__logo-item swiper-slide">
+                    <img class="partners__logo-item-img" src="img/Logo 1.png" alt="img">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="testimonials">
+          <div class="testimonials__container container">
+            <div class="testimonials__content">
+              <div class="testimonials__text-block">
+                <span class="testimonials__subtitle">
+                  TESTIMONIALS
+                </span>
+                <h2 class="testimonials__title ">
+                  What people say about our blog
+                </h2>
+                <div class="testimonials__text">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
+                </div>
+              </div>
+              <div class="testimonials__slider-block">
+                <div class="testimonials__slider swiper">
+                  <div class="testimonials__slider-wrapper swiper-wrapper">
+                    <div class="testimonials__slider-item swiper-slide">
+                      slide1
+                    </div>
+                    <div class="testimonials__slider-item swiper-slide">
+                      slide2
+                    </div>
+                    <div class="testimonials__slider-item swiper-slide">
+                      slide3
+                    </div>
+                    <div class="testimonials__slider-item swiper-slide">
+                      slide4
+                    </div>
+                  </div>
+                  <div class="testimonials__slider-nav">
+                    <div class="testimonials__slider-btn testimonials__slider-btn_prev ">
+                    </div>
+                    <div class="testimonials__slider-btn testimonials__slider-btn_next">
+                      <i class="icon-arrow-right"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
       </main>
       @@include('partials/footer.html')
     </div>
-	<!-- swiper slider -->
+    <!-- swiper slider -->
     <script src="libs/swiper/swiper-bundle.min.js"></script>
     <!-- custom JS -->
     <script src="js/main.js"></script>

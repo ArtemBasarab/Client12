@@ -1,0 +1,72 @@
+.authors {
+    margin: 128px 0;
+    &__container {
+    }
+
+    &__title {
+        text-align: center;
+        margin-bottom: 50px;
+    }
+
+    &__list {
+        padding-bottom: 20px;
+    }
+    &__list-wrapper {
+        
+    }
+
+    &__list-scrollbar {
+        & > .swiper-scrollbar-drag {
+            background: $yellow;
+        }
+    }
+    &__item-img-block {
+        border-radius: 50%;
+        height: 128px;
+        width: 128px;
+        justify-self: center;
+    }
+    
+    &__item {
+        padding: 40px 28px;
+        background: $lightGrey;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        transition: .3s ease;
+        &:hover {
+            background: $lightYellow;
+        }
+    }
+
+    &__item-img {
+        object-fit: cover;
+    }
+
+    &__item-name {
+        margin-top: 25px;
+        margin-bottom: 5px;
+    }
+
+    &__item-position {
+        text-align: center;
+    }
+
+    &__item-social-block {
+        margin-top: 20px;
+    }
+
+    &__item-social-item {
+        margin: 0 8px;
+        color: $black;
+        font-size: 1.125rem;
+        &:first-child {
+            margin-left: 0;
+        }
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+}
+
+
