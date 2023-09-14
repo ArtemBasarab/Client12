@@ -1,0 +1,23 @@
+.join {
+    margin-bottom: 128px;
+    &__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    }
+
+    &__title {
+        margin-bottom: 20px;
+    }
+
+    &__text {
+    }
+
+    &__btn {
+        margin-top: 32px;
+    }
+}
+
+

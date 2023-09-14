@@ -878,11 +878,29 @@ h56px .yellow-btn:hover {
 .testimonials__slider {
   margin-left: 17%;
 }
-.testimonials__slider-item {
-  background: teal;
+.testimonials__slider-item-author {
+  width: 50%;
+  display: grid;
+  grid-template-columns: 0.5fr 1.5fr;
+  grid-template-areas: "avatar name" "avatar location";
+  margin-top: 120px;
+}
+.testimonials__slider-item-author-avatar {
+  grid-area: avatar;
+  align-self: center;
+}
+.testimonials__slider-item-author-name {
+  grid-area: name;
+}
+.testimonials__slider-item-author-location {
+  grid-area: location;
 }
 .testimonials__slider-nav {
+  position: absolute;
   display: flex;
+  bottom: 0;
+  right: 0;
+  z-index: 2;
 }
 .testimonials__slider-btn {
   width: 48px;
@@ -896,8 +914,65 @@ h56px .yellow-btn:hover {
   align-items: center;
   cursor: pointer;
   font-weight: 600;
+  outline: none;
+  transition: 0.3s ease;
+}
+.testimonials__slider-btn:hover {
+  background: #000;
+}
+.testimonials__slider-btn:hover > i {
+  color: #fff;
+}
+@media screen and (max-width: 1180px) {
+  .testimonials__content {
+    flex-direction: column;
+  }
+  .testimonials__text-block {
+    width: 100%;
+    padding-right: 0;
+    padding-bottom: 45px;
+    border-right: none;
+    border-bottom: 1px solid #6d6e76;
+  }
+  .testimonials__slider-block {
+    width: 100%;
+    margin-top: 55px;
+  }
+  .testimonials__slider {
+    margin-left: 0;
+  }
+  .testimonials__slider-item-author {
+    grid-template-columns: max-content auto;
+    gap: 0 20px;
+    width: 100%;
+    margin-top: 30px;
+  }
+  .testimonials__slider-nav {
+    margin-top: 20px;
+    position: relative;
+    justify-content: center;
+  }
 }
 /* === END testimonials section === */
+/* === START join section === */
+.join {
+  margin-bottom: 128px;
+}
+.join__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.join__title {
+  margin-bottom: 20px;
+}
+.join__btn {
+  margin-top: 32px;
+}
+
+/* === END join section === */
 /* === START footer styles === */
 .footer {
   background: #232536;

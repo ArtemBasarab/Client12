@@ -513,11 +513,41 @@
     }
 
     &__slider-item {
-        background: teal;
+        
     }
 
+    &__slider-item-author {
+        width: 50%;
+        display: grid;
+        grid-template-columns: 0.5fr 1.5fr;
+        grid-template-areas: 
+            "avatar name"
+            "avatar location";
+            margin-top: 120px;
+	}
+
+	&__slider-item-author-avatar {
+        grid-area: avatar;
+        align-self: center;
+	}	
+
+	&__slider-item-author-avatar-img {
+	}
+
+	&__slider-item-author-name {
+        grid-area: name;
+	}
+
+	&__slider-item-author-location {
+        grid-area: location;
+	}
+
     &__slider-nav {
+        position: absolute;
         display: flex;
+        bottom: 0;
+        right: 0;
+        z-index: 2;
     }
 
     &__slider-btn {
@@ -532,6 +562,14 @@
         align-items: center;
         cursor: pointer;
         font-weight: 600;
+        outline: none;
+        transition: .3s ease;
+        &:hover {
+            background: #000;
+            & > i {
+                color: #fff
+            }
+        }
         &_prev {
             
         }
@@ -544,9 +582,51 @@
     
 }
 
+@media screen and (max-width: 1180px) {
+    .testimonials {
+        &__content {
+            flex-direction: column
+        }
 
+        &__text-block {
+            width: 100%;
+            padding-right: 0;
+            padding-bottom: 45px;
+            border-right: none;
+            border-bottom: 1px solid $mediumGrey
+        }
+
+        &__slider-block {
+            width: 100%;
+            margin-top: 55px;
+        }
+
+        &__slider {
+            margin-left: 0;
+        }
+
+        &__slider-item-author {
+            grid-template-columns: max-content auto;
+            gap: 0 20px;
+            width: 100%;
+            margin-top: 30px;
+        }
+
+        &__slider-nav {
+            margin-top: 20px;
+            position: relative;
+            justify-content: center;
+        }
+    }
+}
 
 /* === END testimonials section === */
+
+/* === START join section === */
+
+@import "_join.scss";
+
+/* === END join section === */
 
 
 @import "_footer.scss";
