@@ -105,10 +105,15 @@ h6 {
 
 p {
   font-family: "Inter", serif;
+  color: $mediumGrey;
 }
 
 .yellow-btn {
-    padding: 16px 48px;
+    display: flex;
+    justify-content: center;
+    height: 56px;
+    padding: 0 25px;
+    align-items: center;
     background: $yellow;
     transition: .3s ease;
     font-size: 1.125rem;

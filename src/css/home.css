@@ -258,10 +258,15 @@ h6 {
 
 p {
   font-family: "Inter", serif;
+  color: #6d6e76;
 }
 
 .yellow-btn {
-  padding: 16px 48px;
+  display: flex;
+  justify-content: center;
+  height: 56px;
+  padding: 0 25px;
+  align-items: center;
   background: #ffd050;
   transition: 0.3s ease;
   font-size: 1.125rem;
@@ -509,7 +514,6 @@ h56px .yellow-btn:hover {
   margin-bottom: 22px;
 }
 .posts__main-btn {
-  display: block;
   margin-top: 32px;
 }
 .posts__list {
@@ -661,12 +665,13 @@ h56px .yellow-btn:hover {
 .category__item {
   padding: 32px;
   border: 1px solid rgba(109, 110, 118, 0.3);
+  transition: 0.3s ease;
 }
-.category__item:nth-child(2) {
+.category__item:hover {
   background: #ffd050;
   border: 1px solid #ffd050;
 }
-.category__item:nth-child(2) > .category__item-icon-box {
+.category__item:hover > .category__item-icon-box {
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }
 .category__item-icon-box {
@@ -677,6 +682,12 @@ h56px .yellow-btn:hover {
   justify-content: center;
   align-items: center;
   border-radius: 12px;
+}
+.category__item-title-link {
+  color: #232536;
+}
+.category__item-title-link:hover {
+  text-decoration: underline;
 }
 .category__item-title {
   margin-top: 20px;

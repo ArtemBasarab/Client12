@@ -4,21 +4,114 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>About</title>
     <!-- swiper slider -->
     <link rel="stylesheet" href="libs/swiper/swiper-bundle.min.css" />
     <!-- page styles-->
-    <link rel="stylesheet" href="css/home.css" />
+    <link rel="stylesheet" href="css/about.css" />
   </head>
   <body>
     <div class="wrapper">
       <header class="header">
-        
-          @@include('partials/navbar.html')
-        
+        @@include('partials/navbar.html')
+        <div class="header__container container">
+          <div class="header__title-block">
+            <span class="header__subtitle">
+              ABOUT US
+            </span>
+            <h1 class="header__title">
+              We are a team of content writers who share their learnings
+            </h1>    
+          </div>
+          <p class="header__text">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+          </p>
+        </div>
       </header>
       <main>
-        <h1>about</h1>
+        <div class="container">
+          <section class="overview">
+            <img class="overview__bg" src="img/about-overview-img.png" alt="img">
+            <div class="overview__info-block">
+              <div class="overview__info-item">
+                <span class="overview__info-item-counter">12+</span>
+                <span class="overview__info-item-text">Blogs Published</span>
+              </div>
+              <div class="overview__info-item">
+                <span class="overview__info-item-counter">18K+</span>
+                <span class="overview__info-item-text">Views on Finsweet</span>
+              </div>
+              <div class="overview__info-item">
+                <span class="overview__info-item-counter">30K+</span>
+                <span class="overview__info-item-text">Total active Users</span>
+              </div>
+            </div>
+          </section>
+          <section class="values">
+            <div class="values__mission">
+              <span class="values__subtitle">
+                Our mission
+              </span>
+              <h3 class="values__title">
+                Creating valuable content for creatives all around the world
+              </h3>
+              <p class="values__text">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Non blandit massa enim nec. Scelerisque viverra mauris in aliquam sem. At risus viverra adipiscing at in tellus.
+              </p>
+            </div>
+            <div class="values__vision">
+              <span class="values__subtitle">
+                Our vision
+              </span>
+              <h3 class="values__title">
+                A platform that empowers individuals to improve
+              </h3>
+              <p class="values__text">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Non blandit massa enim nec. Scelerisque viverra mauris in aliquam sem. At risus viverra adipiscing at in tellus.
+              </p>
+            </div>             
+          </section>
+          <section class="team">
+            <div class="team__creatives">
+              <div class="team__creatives-text-block">
+                <h2 class="team__creatives-title">
+                  Our team of creatives
+                </h2>
+                <p class="team__creatives-text team__creatives-text_bold">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.
+                </p>
+                <p class="team__creatives-text">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat.
+                </p>
+              </div>
+              <div class="team__creatives-img-block">
+                <img class="team__creatives-img" src="img/team-creatives.png" alt="img">
+              </div>
+            </div>
+            <div class="team__blog">
+              <div class="team__blog-img-block">
+                <img class="team__blog-img" src="img/team-creatives1.png" alt="img">
+              </div>
+              <div class="team__blog-text-block">
+                <h2 class="team__blog-title">
+                  Why we started this Blog
+                </h2>
+                <p class="team__blog-text team__blog-text_bold">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.
+                </p>
+                <p class="team__blog-text">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat.
+                </p>
+              </div>
+            </div>  
+          </section>
+          <section class="authors">
+            @@include('partials/authors.html')
+          </section>
+          <section class="join">
+            @@include('partials/join.html')
+          </section>
+        </div>
       </main>
       @@include('partials/footer.html')
     </div>

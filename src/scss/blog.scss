@@ -1,0 +1,251 @@
+@import "_reset";
+@import "_fonts";
+@import "_icons";
+@import "_global";
+
+@import "_navbar";
+
+/* === START hero section === */
+
+.header {
+    background: $lavender;
+    &__container {
+    }
+
+    &__content {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: 
+            "subtitle img"
+            "title img"
+            "author img"
+            "text img"
+            "btn img";
+        gap: 0 8%;
+        padding: 93px 0;
+    }
+
+    &__subtitle {
+        font-family: "Inter", serif;
+        letter-spacing: 3px;
+        font-weight: 500;
+        grid-area: subtitle;
+    }
+
+    &__title {
+        margin-bottom: 16px;
+        grid-area: title;
+    }
+
+    &__author {
+        margin-bottom: 16px;
+        font-weight: 500;
+        grid-area: author;
+    }
+
+    &__author-name {
+        padding-right: 8px;
+        border-right: 1px solid $black;
+    }
+
+    &__author-link {
+        color: $purple;
+        
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+    &__post-date {
+        margin-left: 10px;
+    }
+
+    &__text {
+        grid-area: text;
+    }
+
+    &__btn {
+        margin-top: 20px;
+        grid-area: btn;
+    }
+
+    &__img-block {
+        grid-area: img;
+    }
+
+    &__img {
+        width: 100%;
+    }
+
+    &__pagination {
+
+    }
+
+    &__pagination-btn {
+        background: transparent;
+    }
+}
+
+@media screen and (max-width: 1135px) {
+   .header {
+    &__content {
+        grid-template-columns: 1fr;
+        gap: 0;
+        grid-template-areas: 
+            "subtitle"
+            "title"
+            "author"
+            "img"
+            "text"
+            "btn";
+    }
+    &__img {
+        height: 400px;
+        object-fit: cover;
+        margin: 24px 0;
+    }
+   }     
+}
+
+/* === END hero section === */
+
+/* === START posts section === */
+
+.posts {
+    margin-top: 70px;
+    margin-bottom: 70px;
+    &_container {
+        position: relative;
+        padding-bottom: 70px;
+    }
+    
+    &__title {
+        border-bottom: 1px solid rgba(109, 110, 118, 0.32);
+        padding-bottom: 32px;
+    }
+
+    &__list {
+    }
+
+    &__item {
+        margin-top: 64px;
+        display: grid;
+        grid-template-columns: 42% auto;
+        grid-template-areas: 
+            "img category"
+            "img title"
+            "img text";
+        gap: 0 32px;
+    }
+
+    &__item-img-block {
+        grid-area: img;
+        height: 320px;
+    }
+
+    &__item-img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    &__item-category {
+        grid-area: category;
+        align-self: flex-end;
+        font-family: "Inter", serif;
+        font-weight: 500;
+        color: $purple;
+        text-transform: uppercase;
+        letter-spacing: 3px;
+    }
+
+    &__item-link {
+        grid-area: title;
+        align-self: center;
+        color: $black;
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+    &__item-title {
+    }
+
+    &__item-text {
+        grid-area: text;
+        
+    }
+
+    &__pagination {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    &__pagination-btn {
+        background: transparent;
+        font-size: 1rem;
+        font-weight: 500;
+        font-family: "Sen", serif;
+        color: $mediumGrey;
+        transition: .3s ease;
+        outline: none;
+        &:hover {
+            font-weight: 700;
+            font-size: 1.2rem;     
+            color: $black;
+        }
+        &:first-child {
+            margin-right: 5px;
+        }   
+        &:last-child {
+            margin-left: 5px;
+        }
+    }
+}
+
+@media screen and (max-width: 950px) {
+    .posts {
+        &__item {
+            grid-template-columns: 1fr;
+            gap: 0;
+            grid-template-areas: 
+                "category"
+                "title"
+                "img"
+                "text";
+        }
+        &__item-title {
+            margin-top: 15px;
+            margin-bottom: 25px;
+        }
+        &__item-text {
+            margin-top: 20px;
+        }
+    }
+}
+
+/* === END posts section === */
+
+/* === START categories section === */
+
+.category {
+    margin-top: 70px;
+    margin-bottom: 128px;
+}
+
+@import "_category.scss";
+
+/* === END categories section === */
+
+/* === START join section === */
+
+@import "_join.scss";
+
+/* === END join section === */
+
+
+
+
+@import "_footer.scss";

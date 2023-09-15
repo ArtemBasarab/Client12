@@ -1,0 +1,405 @@
+@import "_reset";
+@import "_fonts";
+@import "_icons";
+@import "_global";
+
+@import "_navbar";
+
+/* === START hero section === */
+
+.header {
+
+    &__container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    &__title-block {
+        padding: 10%;
+        margin-left: 10%;
+        background: #fff;
+        z-index: 2;
+    }
+
+    &__subtitle {
+    }
+
+    &__title {
+    }
+
+    &__text {
+        align-self: center;
+        text-align: justify;
+        margin-left: 8%;
+    }
+}
+
+@media screen and (max-width: 1280px) {
+    .header {
+        &__container {
+            grid-template-columns: 1.2fr 0.8fr;
+        }
+        &__title-block {
+            padding: 7%;
+        }
+    }
+}
+
+@media screen and (max-width: 910px) {
+    .header {
+        &__container {
+            grid-template-columns: 1fr;
+        }
+
+        &__title-block {
+            padding: 0;
+            margin-left: 0;
+            margin-top: 65px;
+        }
+
+        &__title {
+            margin-top: 15px;
+            margin-bottom: 25px;
+        }
+        &__text {
+            margin-left: 0;
+            
+        }
+    }
+}
+
+/* === END hero section === */
+
+/* === START overview section === */
+
+.overview {
+    margin-top: -40px;
+    height: 444px;
+    margin-bottom: 100px;
+    position: relative;
+    &__bg {
+        width: 100%;
+        height: inherit;
+        object-fit: cover;
+        
+    }
+
+    &__info-block {
+        position: absolute;
+        bottom: 15px;
+        left: 7%;
+        display: flex;
+        align-items: end;
+        padding: 20px 32px;
+        gap: 0 68px;
+        background: $yellow;
+        &::before {
+            content: "";
+            position: absolute;
+            height: 15px;
+            width: 50%;
+            left: 0;
+            bottom: -15px;
+            background: $purple;
+        }
+        &::after {
+            content: "";
+            position: absolute;
+            height: 15px;
+            width: 120%;
+            left: 50%;
+            bottom: -15px;
+            background: $yellow;
+        }
+    }
+
+    &__info-item {
+        display: flex;
+        flex-direction: column;
+        
+        text-align: center;
+    }
+
+    &__info-item-counter {
+        font-size: 3.5rem;
+        font-weight: 700;
+    }
+
+    &__info-item-text {
+        font-family: "Inter", serif;
+    }
+}
+
+@media screen and (max-width: 1280px) {
+    .overview {
+        &__info-block {
+            position: relative;
+            left: 0;
+            bottom: 30px;
+            justify-content: space-around;
+            &::before {
+                content: "";
+                position: absolute;
+                height: 15px;
+                width: 30%;
+                left: 0;
+                bottom: -15px;
+                background: $purple;
+            }
+            &::after {
+                content: "";
+                position: absolute;
+                height: 15px;
+                width: 70%;
+                left: 30%;
+                bottom: -15px;
+                background: $yellow;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 910px) {
+    .overview {
+        margin-top: 30px;
+        &__info-block {
+            flex-direction: column;
+            width: max-content;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            padding: 20px 15px;
+            &::before {
+                content: "";
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 10px;
+                height: 30%;
+                background: $purple;
+            }
+            &::after {
+                content: "";
+                position: absolute;
+                top: 30%;
+                bottom: 0;
+                left: 0;
+                width: 10px;
+                background: $yellow;
+            }
+        }
+    }
+}
+/* === END overview section === */
+
+/* === START mission section === */
+
+.values {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0 32px;
+    background: $lavender;
+    padding: 8% 5%;
+    &__mission {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    &__subtitle {
+        font-family: "Inter", serif;
+        font-weight: 600;
+        letter-spacing: 3px;
+        text-transform: uppercase;
+    }
+
+    &__title {
+        margin-top: 30px;
+        margin-bottom: 20px;
+    }
+
+    &__text {
+    }
+
+    &__vision {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .values {
+        grid-template-columns: 1fr;
+        gap: 60px 0;
+    }
+}
+
+
+/* === END mission section === */
+
+/* === START team section === */
+
+.team {
+    margin: 128px 0;
+    &__creatives {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 0 32px;
+
+    }
+
+    &__creatives-text-block {
+        margin-right: 15%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    &__creatives-title {
+    }
+
+    &__creatives-text {
+
+        &_bold {
+            font-family: "Sen", serif;
+            font-weight: 700;
+            font-size: 1.5rem;
+            margin: 20px 0;
+            
+        }
+    }
+
+    &__creatives-img-block {
+        position: relative;
+        &::before {
+            content: "";
+            position: absolute;
+            left: -51px;
+            top: calc(45% - 90px);
+            display: block;
+            width: 103px;
+            height: 116px;
+            background: $yellow;
+            border-top-left-radius: 50px;
+            filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+        }
+    }
+
+    &__creatives-img {
+        width: 100%;   
+        height: 480px;
+        object-fit: cover;
+    }
+
+    &__blog {margin-top: 128px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 0 32px;
+    }    
+    &__blog-img-block {
+        position: relative;
+        &::before {
+            content: "";
+            position: absolute;
+            bottom: -37px;
+            left: 19%;
+            width: 74px;
+            height: 74px;
+            border-radius: 50%;
+            background: $purple;
+        }
+    }
+
+
+    &__blog-text-block {
+        margin-left: 7%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    &__blog-img {
+        width: 100%;
+        height: 480px;
+        object-fit: cover;
+        object-position: left;
+    }
+
+    &__blog-title {
+    }
+
+    &__blog-text {
+
+        &_bold {
+            font-family: "Sen", serif;
+            font-weight: 700;
+            font-size: 1.5rem;
+            margin: 20px 0;
+
+        }
+    }
+}
+
+@media screen and (max-width: 980px) {
+    .team {
+        &__creatives {
+            display: block;
+        }
+
+        &__creatives-text-block {
+            margin-right: 0;
+        }
+
+        &__creatives-img-block{
+            margin-top: 30px;
+            &::before {
+            content: none;
+           }
+        }   
+        &__creatives-img {
+            height: initial;
+            
+        }
+
+        &__blog {
+            display: flex;
+            flex-direction: column-reverse;
+        }
+
+        &__blog-text-block {
+            margin-left: 0;
+        }
+        &__blog-img-block {
+            margin-top: 30px;
+            &::before {
+                content: none
+            }
+        }
+
+        &__blog-img {
+            height: initial
+        }
+    }
+}    
+
+
+
+/* === END team section === */
+
+/* === START authors section === */
+
+@import "_authors.scss";
+
+/* === END authors section === */
+
+/* === START join section === */
+
+@import "_join.scss";
+/* === END join section === */
+
+
+
+
+@import "_footer.scss";

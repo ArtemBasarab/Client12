@@ -5,25 +5,131 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <!-- swiper slider -->
-    <link rel="stylesheet" href="libs/swiper/swiper-bundle.min.css" />
     <!-- page styles-->
-    <link rel="stylesheet" href="css/home.css" />
+    <link rel="stylesheet" href="css/blog.css" />
   </head>
   <body>
     <div class="wrapper">
       <header class="header">
-        
-          @@include('partials/navbar.html')
-        
+        @@include('partials/navbar.html')
+        <div class="header__container container">
+          <div class="header__content">
+            <span class="header__subtitle"> FEATURED POST </span>
+            <h1 class="header__title">
+              Step-by-step guide to choosing great font pairs
+            </h1>
+            <div class="header__author">
+              <span class="header__author-name">
+                By <a class="header__author-link" href="#">John Doe</a>
+              </span>
+              <span class="header__post-date"> May 23, 2022 </span>
+            </div>
+            <p class="header__text">
+              Duis aute irure dolor in reprehenderit in voluptate velit esse
+              cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+              cupidatat non proident.
+            </p>
+            <a class="header__btn yellow-btn" href="#">Read More ></a>
+
+            <div class="header__img-block">
+              <img
+                class="header__img"
+                src="img/blog-header-img.png"
+                alt="img"
+              />
+            </div>
+          </div>
+        </div>
       </header>
       <main>
-        
+        <section class="posts">
+          <div class="posts_container container">
+            <h2 class="posts__title">
+              All Posts
+            </h2>
+            <div class="posts__list">
+              <div class="posts__item">
+                <div class="posts__item-img-block">
+                  <img class="posts__item-img" src="img/blog-post-img-1.png" alt="img">
+                </div>
+                
+                <a class="posts__item-category" href="">Startup</a>
+                <a class="posts__item-link" href="#">
+                  <h2 class="posts__item-title">Design tips for designers that cover everything you need</h2>
+                </a>
+                <p class="posts__item-text">
+                  Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.
+                </p>
+              </div>
+              <div class="posts__item">
+                <div class="posts__item-img-block">
+                  <img class="posts__item-img" src="img/blog-post-img-2.png" alt="img">
+                </div>
+                
+                <a class="posts__item-category" href="">Bussiness</a>
+                <a class="posts__item-link" href="#">
+                  <h2 class="posts__item-title">How to build rapport with your web design clients</h2>
+                </a>
+                <p class="posts__item-text">
+                  Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.
+                </p>
+              </div>
+              <div class="posts__item">
+                <div class="posts__item-img-block">
+                  <img class="posts__item-img" src="img/blog-post-img-3.png" alt="img">
+                </div>
+                
+                <a class="posts__item-category" href="">Startup</a>
+                <a class="posts__item-link" href="#">
+                  <h2 class="posts__item-title">Logo design trends to avoid in 2022</h2>
+                </a>
+                <p class="posts__item-text">
+                  Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.
+                </p>
+              </div>
+              <div class="posts__item">
+                <div class="posts__item-img-block">
+                  <img class="posts__item-img" src="img/blog-post-img-4.png" alt="img">
+                </div>
+                
+                <a class="posts__item-category" href="">Technology</a>
+                <a class="posts__item-link" href="#">
+                  <h2 class="posts__item-title">8 Figma design systems you can download for free today</h2>
+                </a>
+                <p class="posts__item-text">
+                  Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.
+                </p>
+              </div>
+              <div class="posts__item">
+                <div class="posts__item-img-block">
+                  <img class="posts__item-img" src="img/blog-post-img-1.png" alt="img">
+                </div>
+                
+                <a class="posts__item-category" href="">Economy</a>
+                <a class="posts__item-link" href="#">
+                  <h2 class="posts__item-title">Font sizes in UI design: The complete guide to follow</h2>
+                </a>
+                <p class="posts__item-text">
+                  Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.
+                </p>
+              </div>
+            </div>
+            <div class="posts__pagination">
+              <button class="posts__pagination-btn">< Prev</button>
+              <button class="posts__pagination-btn">Next ></button>
+            </div>
+          </div>
+        </section>
+        <section class="category">
+          <div class="category__container container">
+            <h2 class="category__title">All Categories</h2>
+            @@include('partials/category.html')
+          </div>
+        </section>
+        @@include('partials/join.html')
       </main>
       @@include('partials/footer.html')
     </div>
-	<!-- swiper slider -->
-    <script src="libs/swiper/swiper-bundle.min.js"></script>
     <!-- custom JS -->
     <script src="js/main.js"></script>
   </body>
