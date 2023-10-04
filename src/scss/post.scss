@@ -1,0 +1,143 @@
+@import "_reset";
+@import "_fonts";
+@import "_icons";
+@import "_global";
+
+@import "_navbar";
+
+/* === START hero section === */
+
+.header {
+    
+    &__container {
+        width: 58%;
+        margin: 0 auto;
+    }
+
+    &__content {
+        margin-top: 128px;
+    }
+
+    &__title {
+    }
+
+    &__author {
+        width: 300px;
+        display: grid;
+        grid-template-columns: 15% auto;
+        gap: 0 15px;
+        grid-template-areas: 
+            "avatar name"
+            "avatar date";
+            margin-top: 30px;
+            margin-bottom: 40px;
+    }
+
+    &__author-avatar {
+        grid-area: avatar;
+    }
+
+    &__author-name {
+        grid-area: name;
+        color: $purple;
+        font-family: "Sen", serif;
+        font-size: 1.75rem;
+        font-weight: 700;
+    }
+
+    &__author-post-date {
+        grid-area: date;
+        color: $mediumGrey;
+    }
+
+    &__img-box {
+        width: 80%;
+        
+        margin: 0 auto;
+        & > img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        @media screen and (max-width: 1440px) {
+          width: 90%;
+        }
+        
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .header {
+        &__container {
+            width: 90%;
+        }
+        &__content {
+            margin-top: 45px;
+        }
+    }
+}
+
+/* === END hero section === */
+
+/* === START post section === */
+
+.post {
+    margin: 128px 0;
+    &__container {
+        width: 58%;
+        margin: 0 auto;
+    }
+
+    &__heading {
+        margin-top: 48px;
+        &:first-child {
+            margin-top: 64px;
+        }
+    }
+
+    &__paragraph {
+        margin-top: 16px;
+    }
+
+    &__list {
+        font-family: "Sen", serif;
+        font-size: 1.5rem;
+        font-weight: 700;
+        margin-top: 24px;
+    }
+    
+    &__list-item {
+        
+        display: flex;
+        align-items: center;
+        gap: 0 10px;
+        &::before {
+            content: "";
+            display: block;
+            height: 6px;
+            width: 6px;
+            border-radius: 50%;
+            background: $black;  
+        }
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .post {
+        margin-top: 45px;
+        &__container {
+            width: 90%;
+        }
+    }
+}
+
+/* === END post section === */
+
+/* === END post section === */
+/* === END post section === */
+
+
+
+
+@import "_footer.scss";

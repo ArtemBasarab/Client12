@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- swiper slider -->
+    <link rel="stylesheet" href="libs/swiper/swiper-bundle.min.css" />
+    <!-- page styles-->
+    <link rel="stylesheet" href="css/author.css" />
+  </head>
+  <body class="body">
+    <div class="wrapper">
+      <header class="header">
+        @@include('partials/navbar.html')
+        <div class="header__container">
+          <div class="header__content">
+            <div class="header__content-img-box">
+              <img class="header__content-img" src="img/author-img.png" alt="img">
+            </div>
+            <h1 class="header__content-title">
+              Hey there, I’m Andrew Jonhson and welcome to my Blog
+            </h1>
+            <p class="header__content-text">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Non
+              blandit massa enim nec. Scelerisque viverra mauris in aliquam sem.
+              At risus viverra adipiscing at in tellus.
+            </p>
+            <div class="header__content-social-box">
+              <a class="header__contet-social-item icon-facebook" href="#"></a>
+              <a class="header__contet-social-item icon-twitter" href="#"></a>
+              <a class="header__contet-social-item icon-instagram" href="#"></a>
+              <a class="header__contet-social-item icon-linkedin" href="#"></a>
+            </div>
+          </div>
+        </div>
+      </header>
+      <main>
+        <section class="posts">
+          <div class="posts__container">
+            <h1 class="posts__title">
+              My Posts
+            </h1>
+            <div class="posts__list">
+              <div class="posts__item">
+                <div class="posts__item-img-box">
+                  <img class="posts__item-img" src="img/author-post-img1.png" alt="img">
+                </div>
+                <span class="posts__item-category">
+                  BUSINESS
+                </span>
+                <a class="posts__item-link" href="#">
+                  <h2 class="posts__item-title">
+                    Font sizes in UI design: The complete guide to follow
+                  </h2>
+                </a>
+                <p class="posts__item-text">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                </p>
+              </div>
+              <div class="posts__item">
+                <div class="posts__item-img-box">
+                  <img class="posts__item-img" src="img/author-post-img2.png" alt="img">
+                </div>
+                <span class="posts__item-category">
+                  ECONOMY
+                </span>
+                <a class="posts__item-link" href="#">
+                  <h2 class="posts__item-title">
+                    How to build rapport with your web design clients
+                  </h2>
+                </a>
+                <p class="posts__item-text">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+      @@include('partials/footer.html')
+    </div>
+    <!-- custom JS -->
+    <script src="js/author.js"></script>
+  </body>
+</html>

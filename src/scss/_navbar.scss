@@ -98,6 +98,7 @@
       background: $black;
       display: block;
       transition: 0.2s ease;
+      z-index: 99;
       transform: translateX(-100%);
       text-align: center;
       &.nav-active {
@@ -135,6 +136,7 @@
           transform: rotate(-45deg);
           bottom: 10px;
         }
+       
       }
     }
 

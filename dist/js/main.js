@@ -1,10 +1,22 @@
-window.addEventListener("DOMContentLoaded", () => {
+export const nav = window.addEventListener("DOMContentLoaded", () => {
   document
     .querySelector(".navbar__burger-btn")
     .addEventListener("click", () => {
       document
         .querySelector(".navbar__burger-btn")
         .classList.toggle("burger-active");
+      if (
+        document
+          .querySelector(".navbar__burger-btn")
+          .classList.contains("burger-active")
+      ) {
+        document.querySelector(".body").style.overflowY = "hidden";
+      } else {
+        document.querySelector(".body").style.overflowY = "auto";
+      }
+
+
+
       document
         .querySelector(".navbar__nav-list")
         .classList.toggle("nav-active");
@@ -14,6 +26,9 @@ window.addEventListener("DOMContentLoaded", () => {
     scrollbar: {
       el: ".swiper-scrollbar",
       draggable: true,
+      freeMode: {
+        enabled: true,
+      },
     },
     breakpoints: {
       // when window width is >= 320px
@@ -58,7 +73,6 @@ window.addEventListener("DOMContentLoaded", () => {
         spaceBetween: 20,
         loop: true,
         autoplay: {
-          
           reverseDirection: true,
         },
       },
@@ -67,7 +81,6 @@ window.addEventListener("DOMContentLoaded", () => {
         spaceBetween: 20,
         loop: true,
         autoplay: {
-          
           reverseDirection: true,
         },
       },
@@ -76,7 +89,6 @@ window.addEventListener("DOMContentLoaded", () => {
         spaceBetween: 20,
         loop: true,
         autoplay: {
-          
           reverseDirection: true,
         },
       },
@@ -85,7 +97,6 @@ window.addEventListener("DOMContentLoaded", () => {
         spaceBetween: 20,
         loop: true,
         autoplay: {
-          
           reverseDirection: true,
         },
       },
@@ -94,18 +105,17 @@ window.addEventListener("DOMContentLoaded", () => {
         spaceBetween: 20,
         loop: true,
         autoplay: {
-          
           reverseDirection: true,
         },
-      }
+      },
     },
   });
 
   const testimonialSlider = new Swiper(".testimonials__slider", {
     loop: true,
     navigation: {
-      nextEl: '.testimonials__slider-btn_next',
-      prevEl: '.testimonials__slider-btn_prev',
+      nextEl: ".testimonials__slider-btn_next",
+      prevEl: ".testimonials__slider-btn_prev",
     },
-  })
+  });
 });

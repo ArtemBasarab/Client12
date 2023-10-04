@@ -350,6 +350,7 @@ h56px .yellow-btn:hover {
     background: #232536;
     display: block;
     transition: 0.2s ease;
+    z-index: 99;
     transform: translateX(-100%);
     text-align: center;
   }
